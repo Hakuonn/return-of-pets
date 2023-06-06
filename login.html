@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Festava Live - Ticket HTML Form</title>
+    <title>Return of Pets 寵物歸來</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,13 +22,6 @@
     <link href="css/bootstrap-icons.css" rel="stylesheet">
 
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
-    <!--
-
-TemplateMo 583 Festava Live
-
-https://templatemo.com/tm-583-festava-live
-
--->
 
 </head>
 
@@ -43,7 +36,7 @@ https://templatemo.com/tm-583-festava-live
                     <div class="col-lg-12 col-12 d-flex flex-wrap">
                         <p class="d-flex me-4 mb-0">
                             <i class="bi-person custom-icon me-2"></i>
-                            <strong class="text-dark">Welcome to Music Festival 2023</strong>
+                            <strong class="text-dark">24小時專線 0966-683-955</strong>
                         </p>
                     </div>
 
@@ -52,13 +45,13 @@ https://templatemo.com/tm-583-festava-live
         </header>
 
 
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg bg-black">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    Festava Live
+                    Return of Pets
                 </a>
 
-                <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
+                <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">登入/註冊</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,31 +61,32 @@ https://templatemo.com/tm-583-festava-live
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_1">Home</a>
+                            <a class="nav-link click-scroll" href="index.html">首頁</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_2">About</a>
+                            <a class="nav-link click-scroll" href="index.html#section_2">關於我們</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_3">Artists</a>
+                            <a class="nav-link click-scroll" href="index.html#section_3">員工介紹</a>
+                        </li>
+
+                        <!-- schedule 不要 -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">Schedule</a>
+                        </li> -->
+                        <!-- 目前不需要 -->
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html#section_5">Q&A</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_4">Schedule</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_5">Pricing</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_6">Contact</a>
+                            <a class="nav-link click-scroll" href="index.html#section_6">聯繫我們</a>
                         </li>
                     </ul>
 
-                    <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
+                    <a href="ticket.html" class="btn custom-btn d-lg-block d-none">登入/註冊</a>
                 </div>
             </div>
         </nav>
@@ -106,10 +100,12 @@ https://templatemo.com/tm-583-festava-live
 
                     <div class="col-lg-6 col-10 mx-auto">
                         <form class="custom-form ticket-form mb-5 mb-lg-0" action="#" method="post" role="form">
-                            <h2 class="text-center mb-4">Get started here</h2>
+                            <h2 class="text-center mb-4">登入</h2>
 
                             <div class="ticket-form-body">
-                                <div class="row">
+                                <h6>帳號</h6>
+
+                                <!-- <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <input type="text" name="ticket-form-name" id="ticket-form-name"
                                             class="form-control" placeholder="Full name" required>
@@ -120,14 +116,14 @@ https://templatemo.com/tm-583-festava-live
                                             pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address"
                                             required>
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <input type="tel" class="form-control" name="ticket-form-phone"
-                                    placeholder="Ph 085-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="">
+                                <input type="account" class="form-control" name="ticket-form-email"
+                                    placeholder="Email address" pattern="[^ @]*@[^ @]*" required="">
 
-                                <h6>Choose Ticket Type</h6>
+                                <h6>密碼</h6>
 
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-check form-control">
                                             <input class="form-check-input" type="radio" name="TicketForm"
@@ -147,17 +143,23 @@ https://templatemo.com/tm-583-festava-live
                                             </label>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <input type="number" name="ticket-form-number" id="ticket-form-number"
-                                    class="form-control" placeholder="Number of Tickets" required>
+                                <input type="password" name="password" id="password"
+                                    class="form-control" placeholder="password" required>
 
-                                <textarea name="ticket-form-message" rows="3" class="form-control"
-                                    id="ticket-form-message" placeholder="Additional Request"></textarea>
+                                <!-- <textarea name="ticket-form-message" rows="3" class="form-control"
+                                    id="ticket-form-message" placeholder="Additional Request"></textarea> -->
 
                                 <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                                    <button type="submit" class="form-control">Buy Ticket</button>
+                                    <button type="submit" class="form-control">登入</button>
                                 </div>
+
+                                <div class="col-lg-2 col-md-5 col-6">
+                                    <a href="signup.html">註冊</a>
+                                </div>
+
+
                             </div>
                         </form>
                     </div>
@@ -172,20 +174,20 @@ https://templatemo.com/tm-583-festava-live
                 <div class="row">
 
                     <div class="col-lg-6 col-12">
-                        <h2 class="text-white mb-lg-0">Festava Live</h2>
+                        <h2 class="text-white mb-lg-0">Return of Pets</h2>
                     </div>
 
                     <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
                         <ul class="social-icon d-flex justify-content-lg-end">
                             <li class="social-icon-item">
                                 <a href="#" class="social-icon-link">
-                                    <span class="bi-twitter"></span>
+                                    <span class="bi-reddit"></span>
                                 </a>
                             </li>
 
                             <li class="social-icon-item">
                                 <a href="#" class="social-icon-link">
-                                    <span class="bi-apple"></span>
+                                    <span class="bi-facebook"></span>
                                 </a>
                             </li>
 
@@ -201,11 +203,6 @@ https://templatemo.com/tm-583-festava-live
                                 </a>
                             </li>
 
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-pinterest"></span>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -216,57 +213,49 @@ https://templatemo.com/tm-583-festava-live
             <div class="row">
 
                 <div class="col-lg-6 col-12 mb-4 pb-2">
-                    <h5 class="site-footer-title mb-3">Links</h5>
+                    <h5 class="site-footer-title mb-3">Return of Pets 相關連結</h5>
 
                     <ul class="site-footer-links">
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Home</a>
+                            <a href="#" class="site-footer-link">首頁</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">About</a>
+                            <a href="#" class="site-footer-link">關於我們</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Artists</a>
+                            <a href="question.html" class="site-footer-link">問題</a>
                         </li>
 
                         <li class="site-footer-link-item">
                             <a href="#" class="site-footer-link">Schedule</a>
                         </li>
 
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Pricing</a>
-                        </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Contact</a>
+                            <a href="#" class="site-footer-link">聯繫我們</a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <h5 class="site-footer-title mb-3">Have a question?</h5>
+                    <h5 class="site-footer-title mb-3">有任何問題嗎？聯絡我們</h5>
 
                     <p class="text-white d-flex mb-1">
-                        <a href="tel: 090-080-0760" class="site-footer-link">
-                            090-080-0760
+                        <a href="tel: 0966-683-955" class="site-footer-link">
+                            0966-683-955
                         </a>
                     </p>
 
                     <p class="text-white d-flex">
-                        <a href="mailto:hello@company.com" class="site-footer-link">
-                            hello@company.com
+                        <a href="mailto:c110156220@nkust.edu.tw" class="site-footer-link">
+                            c110156220@nkust.edu.tw
                         </a>
                     </p>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
-                    <h5 class="site-footer-title mb-3">Location</h5>
-
-                    <p class="text-white d-flex mt-3 mb-2">
-                        Silang Junction South, Tagaytay, Cavite, Philippines</p>
-
                     <a class="link-fx-1 color-contrast-higher mt-3" href="#">
                         <span>Our Maps</span>
                         <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
@@ -305,21 +294,20 @@ https://templatemo.com/tm-583-festava-live
                             </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
     </footer>
 
-    <!--
-
-T e m p l a t e M o
-
--->
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
+    <!-- test javascript -->
+    <script src="js/showPage/feedback.js"></script>
 
 </body>
 
