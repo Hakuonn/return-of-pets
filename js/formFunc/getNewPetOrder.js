@@ -40,7 +40,7 @@ window.onload = function(){
      * getNewOrder -> 用於新增訂單資訊
      * @parms boolean
      */
-    function getNewOrder(parms) {
+    function getNewOrder(params) {
         
         let pet_data = {
             'name' : document.getElementById('pet_name').value,
@@ -57,8 +57,6 @@ window.onload = function(){
             let res = response['result']
             if (res['status'] == 200){
                 alert('登入成功 :)')
-    
-                return pet_data
             }
             else if (res['status'] == 500){
                 alert('系統出錯，請再試一次 :(')
