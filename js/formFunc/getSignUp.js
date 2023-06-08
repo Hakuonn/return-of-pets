@@ -20,10 +20,11 @@ window.onload = function(){
         //     let res = respone['result']
         //     if (res['status']==200) {
         //         alert('註冊成功')
-        //         // location.href='./signup.html';
+        //         // location.href='./login.html';
 
         //     } else {
         //         alert('註冊失敗，請聯絡我們')
+        //         // location.href='./signup.html';
         //     }
         // })
         // .err((err)=>{
