@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    
+
     <main>
 
         <header class="site-header">
@@ -35,7 +35,7 @@
 
                     <div class="col-lg-12 col-12 d-flex flex-wrap">
                         <p class="d-flex me-4 mb-0">
-                            <i class="bi-telephone custom-icon me-2"></i>
+                            <i class="bi-person custom-icon me-2"></i>
                             <strong class="text-dark">24小時專線 0966-683-955</strong>
                         </p>
                     </div>
@@ -51,7 +51,7 @@
                     Return of Pets
                 </a>
 
-                <a href="login.html" class="btn custom-btn d-lg-none ms-auto me-4"  id="logButton">登入/註冊</a>
+                <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">登入/註冊</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,81 +78,96 @@
                         </li> -->
                         <!-- 目前不需要 -->
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="./qa.html">Q&A</a>
+                            <a class="nav-link click-scroll" href="index.html#section_5">Q&A</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="index.html#section_6">聯繫我們</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="./memberCenter.html">個人專頁</a>
+                        </li>
                     </ul>
 
-                    <a href="login.html" class="btn custom-btn d-lg-block d-none">登入/註冊</a>
+                    <a href="ticket.html" class="btn custom-btn d-lg-block d-none" id="logButton">登入/註冊</a>
                 </div>
             </div>
         </nav>
 
 
-        <section>
-            <div class="pt-lg-5 pt-5"></div>
-            <div class="pt-lg-5 pt-5"></div>
+        <section class="ticket-section section-padding">
+            <div class="section-overlay"></div>
+
             <div class="container">
-                <div class="row pt-5 pt-lg-5">
-                    <div class="col-sm-4  pb-5 pb-lg-5">
-                      <div class="card">
-                        <img src="./images/green.png" alt="" class="card-img-top img-fluid">
-                        <div class="card-body">
-                          <h5 class="card-title">A方案-自然葬</h5>
-                          <p class="card-text">回歸自然，落葉歸根</p>
-                          <ul class="card-text">
-                            <li>樹葬、花葬</li>
-                            <li>無管理費</li>
-                            <li>環保、乾淨</li>
-                          </ul>
-                          <button class="form-control" class="btn btn-primary" name="methods" value="methodA">選擇此方案</button>
-                        </div>
-                      </div>
+                <div class="row">
+
+                    <div class="col-lg-6 col-10 mx-auto">
+                        <form class="custom-form ticket-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                            <h2 class="text-center mb-4">登入</h2>
+
+                            <div class="ticket-form-body">
+                                <h6>帳號</h6>
+
+                                <!-- <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <input type="text" name="ticket-form-name" id="ticket-form-name"
+                                            class="form-control" placeholder="Full name" required>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <input type="email" name="ticket-form-email" id="ticket-form-email"
+                                            pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address"
+                                            required>
+                                    </div>
+                                </div> -->
+
+                                <input type="account" class="form-control" name="ticket-form-email"
+                                    placeholder="Email address" pattern="[^ @]*@[^ @]*" required="">
+
+                                <h6>密碼</h6>
+
+                                <!-- <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-check form-control">
+                                            <input class="form-check-input" type="radio" name="TicketForm"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Eary bird $120
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-check form-check-radio form-control">
+                                            <input class="form-check-input" type="radio" name="TicketForm"
+                                                id="flexRadioDefault2">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Standard $240
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <input type="password" name="password" id="password"
+                                    class="form-control" placeholder="password" required>
+
+                                <!-- <textarea name="ticket-form-message" rows="3" class="form-control"
+                                    id="ticket-form-message" placeholder="Additional Request"></textarea> -->
+
+                                <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                                    <button type="submit" class="form-control">登入</button>
+                                </div>
+
+                                <div class="col-lg-2 col-md-5 col-6">
+                                    <a href="signup.html">註冊</a>
+                                </div>
+
+
+                            </div>
+                        </form>
                     </div>
-                    <div class="col-sm-4 pb-5 pb-lg-5">
-                      <div class="card">
-                        <img src="./images/single_fire.png" alt="" class="card-img-top img-fluid">
-                        <div class="card-body">
-                          <h5 class="card-title">B方案-個別火化</h5>
-                          <p class="card-text">寧靜祥和</p>
-                          <ul class="card-text">
-                            <li>骨灰紀念</li>
-                            <li>U質</li>
-                            <li>環保、乾淨</li>
-                          </ul>
-                          <button class="form-control" class="btn btn-primary" name="methods" value="methodB">選擇此方案</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4 pb-5 pb-lg-5">
-                        <div class="card">
-                          <img src="./images/group_fire.png" alt="" class="card-img-top img-fluid">
-                          <div class="card-body">
-                            <h5 class="card-title">C方案-團體火化</h5>
-                            <p class="card-text">禮儀環保，簡約莊嚴</p>
-                            <ul class="card-text">
-                                <li>不孤單</li>
-                                <li>U質</li>
-                                <li>環保、乾淨</li>
-                            </ul>
-                            <button class="form-control" class="btn btn-primary" name="methods" value="methodC">選擇此方案</button>
-                          </div>
-                        </div>
-                      </div>
                 </div>
-
-        </section>
-
-
-
-
-
-
-        <section class="contact-section section-padding" id="section_6">
-            <div id="root"></div>
         </section>
     </main>
 
@@ -206,24 +221,24 @@
 
                     <ul class="site-footer-links">
                         <li class="site-footer-link-item">
-                            <a href="./index.html/#" class="site-footer-link">首頁</a>
+                            <a href="#" class="site-footer-link">首頁</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="index.html#section_2" class="site-footer-link">關於我們</a>
+                            <a href="#" class="site-footer-link">關於我們</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="index.html#section_3" class="site-footer-link">員工介紹</a>
+                            <a href="question.html" class="site-footer-link">問題</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="index.html#section_5" class="site-footer-link">Q&A</a>
+                            <a href="#" class="site-footer-link">Schedule</a>
                         </li>
 
 
                         <li class="site-footer-link-item">
-                            <a href="index.html#section_6" class="site-footer-link">聯繫我們</a>
+                            <a href="#" class="site-footer-link">聯繫我們</a>
                         </li>
                     </ul>
                 </div>
@@ -290,15 +305,15 @@
     </footer>
 
     <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/custom.js"></script>
-    <!-- 自用 -->
-    <script src="js/formFunc/plan.js"></script>
+    <script src="js/mod/jquery.min.js"></script>
+    <script src="js/mod/bootstrap.min.js"></script>
+    <script src="js/mod/jquery.sticky.js"></script>
+    <script src="js/mod/custom.js"></script>
+    <script src="js/mod/click-scroll.js"></script>
+    <!-- test javascript -->
     <script src="js/formFunc/log.js"></script>
 
-    <!-- 自用 -->
+
 </body>
+
 </html>

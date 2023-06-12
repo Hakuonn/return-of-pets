@@ -26,7 +26,7 @@
 </head>
 
 <body>
-
+    
     <main>
 
         <header class="site-header">
@@ -35,7 +35,7 @@
 
                     <div class="col-lg-12 col-12 d-flex flex-wrap">
                         <p class="d-flex me-4 mb-0">
-                            <i class="bi-person custom-icon me-2"></i>
+                            <i class="bi-telephone custom-icon me-2"></i>
                             <strong class="text-dark">24小時專線 0966-683-955</strong>
                         </p>
                     </div>
@@ -51,7 +51,7 @@
                     Return of Pets
                 </a>
 
-                <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">登入/註冊</a>
+                <a href="login.html" class="btn custom-btn d-lg-none ms-auto me-4"  id="logButton">登入/註冊</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,15 +78,19 @@
                         </li> -->
                         <!-- 目前不需要 -->
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_5">Q&A</a>
+                            <a class="nav-link click-scroll" href="./qa.html">Q&A</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="index.html#section_6">聯繫我們</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="./memberCenter.html">個人專頁</a>
+                        </li>
                     </ul>
 
-                    <a href="ticket.html" class="btn custom-btn d-lg-block d-none" id="logButton">登入/註冊</a>
+                    <a href="login.html" class="btn custom-btn d-lg-block d-none">登入/註冊</a>
                 </div>
             </div>
         </nav>
@@ -95,77 +99,71 @@
         <section class="ticket-section section-padding">
             <div class="section-overlay"></div>
 
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-10 mx-auto">
-                        <form class="custom-form ticket-form mb-5 mb-lg-0" action="#" method="post" role="form">
-                            <h2 class="text-center mb-4">登入</h2>
-
-                            <div class="ticket-form-body">
-                                <h6>帳號</h6>
-
-                                <!-- <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <input type="text" name="ticket-form-name" id="ticket-form-name"
-                                            class="form-control" placeholder="Full name" required>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <input type="email" name="ticket-form-email" id="ticket-form-email"
-                                            pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address"
-                                            required>
-                                    </div>
-                                </div> -->
-
-                                <input type="account" class="form-control" name="ticket-form-email"
-                                    placeholder="Email address" pattern="[^ @]*@[^ @]*" required="">
-
-                                <h6>密碼</h6>
-
-                                <!-- <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="form-check form-control">
-                                            <input class="form-check-input" type="radio" name="TicketForm"
-                                                id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                Eary bird $120
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="form-check form-check-radio form-control">
-                                            <input class="form-check-input" type="radio" name="TicketForm"
-                                                id="flexRadioDefault2">
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                Standard $240
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div> -->
-
-                                <input type="password" name="password" id="password"
-                                    class="form-control" placeholder="password" required>
-
-                                <!-- <textarea name="ticket-form-message" rows="3" class="form-control"
-                                    id="ticket-form-message" placeholder="Additional Request"></textarea> -->
-
-                                <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                                    <button type="submit" class="form-control">登入</button>
-                                </div>
-
-                                <div class="col-lg-2 col-md-5 col-6">
-                                    <a href="signup.html">註冊</a>
-                                </div>
-
-
-                            </div>
-                        </form>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        您的愛寵往生了，該怎麼辦?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            本平台提供多種方式的安葬方式，並且設在全台都有服務公司。
+                        </div>
+                    </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        本平台寵物葬儀的主要服務項目是什麼?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            本平台提供多種項目，例如：環保葬，火葬，團體葬等等。
+                        </div>
+                    </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        會不會需要高額費用?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            本平台提供的安葬項目，主要是希望安葬可以結合環保，在環保葬的部分提供費用的降價，希望寵物的飼主們再送毛小孩的最後一程時，也可以友善我們的環境。
+                        </div>
+                    </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        服務的區域有哪些?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            本平台結合全台各地的禮儀公司，並不會有區域上的限制。
+                        </div>
+                    </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        寵物葬儀需要準備什麼嗎?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            準備毛小孩生前最喜歡的玩具或是衣服等等，讓毛小孩在另一個世界也可以帶著它們。
+                        </div>
+                    </div>
                     </div>
                 </div>
+                </div>
         </section>
-    </main>
+
 
 
     <footer class="site-footer">
@@ -225,7 +223,7 @@
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="question.html" class="site-footer-link">問題</a>
+                            <a href="#" class="site-footer-link">Artists</a>
                         </li>
 
                         <li class="site-footer-link-item">
@@ -306,10 +304,9 @@
     <script src="js/jquery.sticky.js"></script>
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
-    <!-- test javascript -->
+
+    <!-- 自用 -->
     <script src="js/formFunc/log.js"></script>
 
-
 </body>
-
 </html>
