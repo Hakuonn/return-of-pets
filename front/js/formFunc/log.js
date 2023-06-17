@@ -1,5 +1,4 @@
-import { SignUp } from "./getSignUp";
-import {LogOut} from "./getLogOut";
+
 
 window.onload =  function(){
     document.getElementById('logButton').onclick = function(){

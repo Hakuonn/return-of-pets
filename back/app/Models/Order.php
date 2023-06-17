@@ -3,33 +3,6 @@ namespace Models;
 use vendor\DB;
 
 class Order{
-
-    // public function getRoles($id){
-    //     $sql = "SELECT role_id FROM `user_role` WHERE `user_id` = ? ";
-    //     $arg = array($id);
-    //     $response = DB::select($sql, $arg);
-    //     $result = $response['result'];
-    //     for ($i = 0; $i < count($result); $i++){
-    //         $result[$i] = $result[$i]['role_id'];
-    //     }
-    //     $response['result'] = $result;
-    //     return $response;
-    // }
-
-    // public function checkidpw($id,$pw){
-    //     $sql = "SELECT * FROM `user` WHERE `id`=? and `passwd` =?;";
-    //     $arg = array($id,$pw);
-    //     $response = DB::select($sql, $arg);
-    //     $rows = $response['result'];
-    //     if (count($rows)==0){
-    //         $response['status'] = 404;
-    //         $response['message'] = '帳號或密碼錯誤';
-    //     }
-
-    //     return $response;
-
-    // }
-
     public function getOrders(){
         $sql = "SELECT * FROM `fd_order`";
         $arg = NULL;
@@ -42,8 +15,8 @@ class Order{
      * @return array
      */
     public function getOrder($account){
-
-        $sql = "SELECT * FROM `fd_order` WHERE `account`=?";           
+        $id = DB::select("",array());
+        $sql = "SELECT * FROM `fd_order` WHERE `account`=?";
         $arg = array($account);
         return DB::select($sql,$arg);
     }
@@ -61,7 +34,7 @@ class Order{
     public function updateOrder($time,$id,$name,$amount){
         $sql = "UPDATE `fd_order` SET `time`=?,`name`=?,`amount`=? WHERE order_id=?";
         return DB::update($sql,array($time,$name,$amount,$id));
-    
+
     }
 
 }

@@ -43,9 +43,9 @@ class AuthMiddleware extends Controller{
     public static function checkPrevilege($action){
         if (isset($_POST['role'])){
             $role = $_POST['role'];
-            if ($role == 'customer'){
+            if ($role == 'member'){
                 $em = new MemberModel();
-                $response = $em->getRoles();
+                $response = $em->getRoles($role);
                 $user_roles = $response['result'];
             }
             else if ($role == 'company'){
@@ -59,7 +59,9 @@ class AuthMiddleware extends Controller{
                 $user_roles = $response['result'];
             }
             else {
-                return self::repsonse(404,'role not found');
+                $em = new MemberModel();
+                $response = $em -> getRoles('visitor');
+                $user_roles = $response['result'];
             }
             $am = new Action();
             $response = $am->getRoles($action);
@@ -73,7 +75,7 @@ class AuthMiddleware extends Controller{
              }
         }
         else{
-            return self::response(403, '權限不足');
+            return self::response(404,'role not found');
         }
     }
     /**

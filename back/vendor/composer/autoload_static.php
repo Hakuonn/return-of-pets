@@ -15,6 +15,10 @@ class ComposerStaticInit838581337c6c836a1a1bf7e3097fba53
         array (
             'firebase\\JWT\\' => 13,
         ),
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
         'M' => 
         array (
             'Models\\' => 7,
@@ -38,6 +42,10 @@ class ComposerStaticInit838581337c6c836a1a1bf7e3097fba53
         'firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'Models\\' => 
         array (

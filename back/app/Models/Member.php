@@ -5,13 +5,17 @@ use vendor\DB;
 
 class Member{
 
-    public function getRoles(){
-        $sql = "SELECT action_id FROM `user_role` WHERE `role_name` = 'customer' ";
+    public function getRoles($who){
+        if ($who == 'visitor') {
+            $sql = "SELECT action_id FROM `role_action` WHERE `role_name` = 'visitor' ";
+        }
+        else{
+            $sql = "SELECT action_id FROM `role_action` WHERE `role_name` = 'customer' ";
+        }
         $response = DB::select($sql,null);
         $result = $response['result'];
         for ($i = 0; $i < count($result); $i++){
-            $result[$i] = $result[$i]['role_id'];
-            // echo $result[$i]['role_id'];
+            $result[$i] = $result[$i]['action_id'];
         }
         $response['result'] = $result;
         return $response;
@@ -35,19 +39,9 @@ class Member{
         return DB::select($sql,$arg);
     }
 
-    public function getMember($findway,$params){
-        if ($findway == "id"){
-            $sql = "SELECT * FROM `member` WHERE `memid` = ?";
-            $arg = array($params);
-        }
-        else if ($findway == "name"){
-            $sql = "SELECT * FROM `member` WHERE `name` like '%$params%'";
-            $arg = NULL;
-        }
-        else if ($findway == "account"){
+    public function getMember($params){
             $sql = "SELECT * FROM `member` WHERE `account` = ?";
             $arg = array($params);
-        }
         return DB::select($sql , $arg);
     }
 
@@ -55,15 +49,12 @@ class Member{
     public function newMember($name,$address,$birth,$email,$phone,$account,$passwd){
         $member_quatity = DB::select("SELECT * FROM `member`",NULL);
         $id =  count($member_quatity) + 2;
-        $id = sprintf("Mem_%05d",$id);
-        $sql = "INSERT INTO `member` (`memid`,`role_name`, `name`, `address`, `birth`, `email`, `phone`, `account`, `passwd`) VALUES ($id,'customer',?, ?, ?, ?, ?, ?, ?);";
-        $arg = array($name,$address,$birth,$email,$phone,$account,$passwd);
-        try{
-             return DB::insert($sql,$arg);
-        }
-        catch(Exception $e){
+        $id = sprintf("mem_%06d",$id);
+        $sql = "INSERT INTO `member` (`memid`, `name`, `address`, `phone`, `birth`, `email`, `account`, `password`) VALUES (?,?, ?, ?, ?, ?, ?, ?);";
+        $arg = array($id,$name,$address,$phone,$birth,$email,$account,$passwd);
 
-        }
+             return DB::insert($sql,$arg);
+
 
     }
 

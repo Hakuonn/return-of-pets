@@ -8,9 +8,7 @@ class Employee
 
     public function getRoles()
     {
-        $sql = "";
-        $role_name = DB::select($sql);
-        $sql = "SELECT action_id FROM `user_role` WHERE `role_name` = ? ";
+        $sql = "SELECT action_id FROM `role_action` WHERE `role_name` = 'employee' ";
         $response = DB::select($sql, null);
         $result = $response['result'];
         for ($i = 0; $i < count($result); $i++) {
@@ -35,30 +33,30 @@ class Employee
 
     }
 
-    public function getemployees()
+    public function getEmployees()
     {
         $sql = "SELECT * FROM `company`";
         $arg = NULL;
         return DB::select($sql, $arg);
     }
-    public function getemployee($id)
+    public function getEmployee($id)
     {
 
         $sql = "SELECT * FROM `company` WHERE `user_id`=?";
         $arg = array($id);
         return DB::select($sql, $arg);
     }
-    public function newemployee($id, $passwd, $name, $addr, $phone, $email)
+    public function newEmployee($id, $passwd, $name, $addr, $phone, $email)
     {
-        $sql = "INSERT INTO `company` (`user_id`,`passwd`,`name`,`addr`,`phone`,`email`)VALUES(?,?,?,?,?,?)";
+        $sql = "INSERT INTO `company` (`comid`, `name`, `area`, `address`, `email`, `phone`, `account`, `password`) VALUES (?,?,?,?,?,?,?,?);";
         return DB::insert($sql, array($id, $passwd, $name, $addr, $phone, $email));
     }
-    public function removeemployee($id)
+    public function removeEmployee($id)
     {
         $sql = "DELETE FROM `company` WHERE user_id=?";
         return DB::delete($sql, array($id));
     }
-    public function updateemployee($id, $passwd, $name, $addr, $phone, $email)
+    public function updateEmployee($id, $passwd, $name, $addr, $phone, $email)
     {
         $sql = "UPDATE `company` SET `passwd`=?,`name`=?,`addr`=?,`phone`=?,`email`=? WHERE user_id=?";
         return DB::update($sql, array($passwd, $name, $addr, $phone, $email, $id));

@@ -5,9 +5,8 @@
 $router->register('getMember', 'Member', 'getMember');
 $router->register('getMembers', 'Member', 'getMembers');
 $router->register('newMember', 'Member', 'newMember');
-$router->register('getMember', 'Member', 'getMember');
-$router->register('getMember', 'Member', 'getMember');
-$router->register('getMember', 'Member', 'getMember');
+$router->register('updateMember', 'Member', 'updateMember');
+$router->register('removeMember', 'Member', 'removeMember');
 
 // Employee
 $router->register('getEmployees', 'Employee', 'getEmployees');
@@ -16,19 +15,19 @@ $router->register('newEmployee', 'Employee', 'newEmployee');
 $router->register('removeEmployee', 'Employee', 'removeEmployee');
 $router->register('updateEmployee', 'Employee', 'updateEmployee');
 
-// Product
-$router->register('getProducts', 'Product', 'getProducts');
-$router->register('getProduct', 'Product', 'getProduct');
-$router->register('newProduct', 'Product', 'newProduct');
-$router->register('removeProduct', 'Product', 'removeProduct');
-$router->register('updateProduct', 'Product', 'updateProduct');
+// Company
+$router->register('getCompanys', 'Company', 'getCompanys');
+$router->register('getCompany', 'Company', 'getCompany');
+$router->register('newCompany', 'Company', 'newCompany');
+$router->register('removeCompany', 'Company', 'removeCompany');
+$router->register('updateCompany', 'Company', 'updateCompany');
 
-// Customer
-$router->register('getCustomers', 'Customer', 'getCustomers');
-$router->register('getCustomer', 'Customer', 'getCustomer');
-$router->register('newCustomer', 'Customer', 'newCustomer');
-$router->register('removeCustomer', 'Customer', 'removeCustomer');
-$router->register('updateCustomer', 'Customer', 'updateCustomer');
+// Method
+$router->register('getMethods', 'Method', 'getMethods');
+$router->register('getMethod', 'Method', 'getMethod');
+$router->register('newMethod', 'Method', 'newMethod');
+$router->register('removeMethod', 'Method', 'removeMethod');
+$router->register('updateMethod', 'Method', 'updateMethod');
 
 // Order
 $router->register('getOrders', 'Order', 'getOrders');
